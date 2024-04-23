@@ -12,7 +12,7 @@ After selecting the relevant tweets, we proceeded with data cleaning by removing
 
 For our prompt engineering task, we consulted resources on the maximum context window size that GPT Turbo 0125 can handle, which is 16,000 tokens. To comply with this limitation, we opted to sample our dataset down to only 200 lines. Although this reduction may seem substantial, it was necessary because maintaining most of the original features in the dataset substantially increases the token count. Consequently, we managed to reduce the number of tokens in our combined request (data + final prompt) to just under 14,000 tokens, leaving a buffer of approximately 2,000 tokens for GPT's response.
 
-Please refer to the Data folder to access our "sample_data.csv" file, the original "tweets.csv" dataset, and the "data_processing.ipynb" notebook for detailed information on our data preparation process.
+Please refer to the Data folder to access our "sample_data.csv" file, the original "tweets.zip" dataset, and the "data_processing.ipynb" notebook for detailed information on our data preparation process.
 
 
 ## :clipboard: Prompt
