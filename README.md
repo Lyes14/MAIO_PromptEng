@@ -1,11 +1,8 @@
 # MAIO Prompt Engineering Task - Group 2
 This directory documents the methodological approach and the results obtained for the prompt engineering task of the group work for the course Management of AI in Organizations.
+There are three distinct sections. The first section pertains to the data used, the second deals with the construction of our prompt, and the last addresses the analysis of our results. For each of these parts, you will find a folder in the repository containing the code, prompts, analyses, etc.
 
----
-
-Il y a trois sections différentes, la première concerne les données utilisées pour cette tâche. Pour chacune de ses parties, vous trouverez un dossier dans le repository, contenant le code, les prompts, les analyses, etc
-
-
+----
 Données: 
 En se basant sur le notebook fourni en donnée du projet sur kaggle, nous avons premièrement fais le choix de ne garder que les tweets ayant été classifé avec un sentiment négatif. Pour se faire, nous avons utilisé l'exacte même méthode que dans le notebook de donnée sur Kaggle avec vaderSentiment. En effet, étant donné que notre question de recherche concerne les préoccupation du public vis-à-vis des LLM, il nous a semblé pertinent de traiter ainsi uniquement les tweet à sentiment negatif. Suite à cela, nous avons procédé au nettoyage de nos données en supprimant les entrées avec des features vide et également en ne gardant que les colonnes qui nous intéressent pour notre analyse. Ainsi, en suivant ce plan, nous nous sommes retrouvés avec un dataset de 26237 lignes et 7 colonnes. Pour procéder à notre tâche de prompt engineering, nous nous sommes documenté sur la taille maximal du contexte (context window) qu'est capable d'avoir en request+repsonse de gpt turbo 0125 est de 16k token. Ainsi, pour respecter cette limite, nous avons décidé d'échantilloner notre dataset à 200 lignes seulement. Cela peu paraitre peu mais nous avons été contraint de faire ce choix étant donné que pour répondre à notre quesiton de recherche, nous avions besoin de garder la plupart des features présents initialement dans le dataset ce qui augmente considérablement le nombre de tokens. Ce faisant nous avons pu réduire le nombre de token de notre requête (data + prompt final) a un peu moins de 14'000 tokens, ce qui laisse un marge de 2'000 token estimée suffisante pour la réponse de GPT. (Veuillez ouvrir le dossier Data pour trouver notre fichier csv "sample_data.csv", le dataset de base "tweets.csv" et le notebook pour la préparation de nos données "data_processing.ipynb")
 
