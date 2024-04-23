@@ -3,7 +3,7 @@ This directory documents the methodological approach and the results obtained fo
 There are three distinct sections. The first section pertains to the data used, the second deals with the construction of our prompt, and the last addresses the analysis of our results. For each of these parts, you will find a folder in the repository containing the code, prompts, analyses, etc.
 
 ----
-## Data:
+## :floppy_disk: Data:
 
 
 Based on the notebook provided in the Kaggle project data, we made a strategic decision to focus exclusively on tweets classified with negative sentiment using the same method as in the Kaggle data notebook with vaderSentiment. This approach aligns with our research question, which concerns the public's concerns regarding large language models (LLMs), making it pertinent to concentrate solely on negatively sentimented tweets.
