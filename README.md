@@ -3,8 +3,16 @@ This directory documents the methodological approach and the results obtained fo
 There are three distinct sections. The first section pertains to the data used, the second deals with the construction of our prompt, and the last addresses the analysis of our results. For each of these parts, you will find a folder in the repository containing the code, prompts, analyses, etc.
 
 ----
-Données: 
-En se basant sur le notebook fourni en donnée du projet sur kaggle, nous avons premièrement fais le choix de ne garder que les tweets ayant été classifé avec un sentiment négatif. Pour se faire, nous avons utilisé l'exacte même méthode que dans le notebook de donnée sur Kaggle avec vaderSentiment. En effet, étant donné que notre question de recherche concerne les préoccupation du public vis-à-vis des LLM, il nous a semblé pertinent de traiter ainsi uniquement les tweet à sentiment negatif. Suite à cela, nous avons procédé au nettoyage de nos données en supprimant les entrées avec des features vide et également en ne gardant que les colonnes qui nous intéressent pour notre analyse. Ainsi, en suivant ce plan, nous nous sommes retrouvés avec un dataset de 26237 lignes et 7 colonnes. Pour procéder à notre tâche de prompt engineering, nous nous sommes documenté sur la taille maximal du contexte (context window) qu'est capable d'avoir en request+repsonse de gpt turbo 0125 est de 16k token. Ainsi, pour respecter cette limite, nous avons décidé d'échantilloner notre dataset à 200 lignes seulement. Cela peu paraitre peu mais nous avons été contraint de faire ce choix étant donné que pour répondre à notre quesiton de recherche, nous avions besoin de garder la plupart des features présents initialement dans le dataset ce qui augmente considérablement le nombre de tokens. Ce faisant nous avons pu réduire le nombre de token de notre requête (data + prompt final) a un peu moins de 14'000 tokens, ce qui laisse un marge de 2'000 token estimée suffisante pour la réponse de GPT. (Veuillez ouvrir le dossier Data pour trouver notre fichier csv "sample_data.csv", le dataset de base "tweets.csv" et le notebook pour la préparation de nos données "data_processing.ipynb")
+##Données:
+
+
+Based on the notebook provided in the Kaggle project data, we made a strategic decision to focus exclusively on tweets classified with negative sentiment using the same method as in the Kaggle data notebook with vaderSentiment. This approach aligns with our research question, which concerns the public's concerns regarding large language models (LLMs), making it pertinent to concentrate solely on negatively sentimented tweets.
+
+After selecting the relevant tweets, we proceeded with data cleaning by removing entries with empty features and retaining only the columns necessary for our analysis. This process resulted in a refined dataset comprising 26,237 rows and 7 columns.
+
+For our prompt engineering task, we consulted resources on the maximum context window size that GPT Turbo 0125 can handle, which is 16,000 tokens. To comply with this limitation, we opted to sample our dataset down to only 200 lines. Although this reduction may seem substantial, it was necessary because maintaining most of the original features in the dataset substantially increases the token count. Consequently, we managed to reduce the number of tokens in our combined request (data + final prompt) to just under 14,000 tokens, leaving a buffer of approximately 2,000 tokens for GPT's response.
+
+Please refer to the Data folder to access our "sample_data.csv" file, the original "tweets.csv" dataset, and the "data_processing.ipynb" notebook for detailed information on our data preparation process.
 
 
 Prompt:
