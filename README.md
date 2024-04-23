@@ -18,7 +18,7 @@ Please refer to the Data folder to access our "sample_data.csv" file, the origin
 ## Prompt:
 The development of our prompt unfolded in several stages. Initially, we conducted trials without tags or a persona, simply providing GPT with the context and instructions. The outcomes were not very satisfying, particularly in terms of structure, as the responses were quite short and lacked detail (Version 1). Following valuable advice from Henri Jamet, we refined our prompt by incorporating tags and enhancing the detail of our instructions. The results then improved, especially in terms of content, though issues related to the format persisted (Version 2). To address this, we added examples and a format tag at the end, compelling GPT to write in Markdown and maintain a certain length in its response (Version 3).
 
-To document this iterative process, we decided to display all three versions along with an example response for each in the prompt directory. Please refer to the Prompt folder to find the three different versions of the prompt, each accompanied by an example of the results.
+To document this iterative process, we decided to display all three versions along with an example response for each in the prompt directory. Please refer to the Prompt folder to find the three different versions of the prompt ("version1.txt", "version2.txt", "version3.txt"), each accompanied by an example of the results.
 
 
 ## Analysis:
